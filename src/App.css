@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.router-container{
+    padding: 10px;
+   
+    color: white;
+    font-size: 14px;
+    padding-left: 30px;
+    cursor: pointer;
+    &:hover{
+        background-color: #151a46;
+
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Logo{
+    font-size: 25px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.active p{
+    color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.responsive{
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
-}
+@media (max-width:540px) {
+    .responsive{
+        display: inline;
+    }
+    .sidebar{
+        position:absolute;
+        z-index: 111;
+        width: 60%;
+        height: 100dvh;
+        display: none;
+    }
+    .sidebar1{
+        position:absolute;
+        z-index: 111;
+        width: 60%;
+        height: 100dvh;
+        
+    }
+    .contact{
+        width: 90%;
+    }
+    .NewBlog{
+        width: 90%;
+    }
+    .Homepage{
+        grid-template-columns: auto;
+        row-gap: 30px;
+        justify-content: center;
+    }
+    .search{
+        width: 150px;
+        margin-top: 60px;
+    }
+    .search1{
+        width: 200px;
+        margin-top: 60px;
+    }
+    .blogpage{
+        display:flex;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        padding-top: 60px;
+        width: 100%;
+    }
+    .blogpage1{
+        width: 100%;
+    }
+    .comment{
+        display: block;
+        position: static;
+        padding: 10px;
+        border: 1px solid black;
+        width: 100%;
+    }
+    .handlebar{
+        display: block;
+    }
+    .myblog{
+       padding-top: 60px;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    .registeer{
+        width: 90%;
+    }
+
+    .text{
+        width: 80%;
+    }
 }
